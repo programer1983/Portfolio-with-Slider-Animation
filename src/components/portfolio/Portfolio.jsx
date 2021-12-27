@@ -1,8 +1,11 @@
 import PortfolioList from '../portfolioList/PortfolioList';
+import {useState} from "react"
 import './portfolio.scss'
 
 export default function Portfolio() {
-    const list = [
+  const [selected, setSelected] = useState("featured")
+    
+  const list = [
         {
           id: "featured",
           title: "Featured",
@@ -30,7 +33,12 @@ export default function Portfolio() {
             <h1>Portfolio</h1>
             <ul>
                {list.map((item) => (
-                   <PortfolioList title={item.title}/>
+                   <PortfolioList 
+                      title={item.title} 
+                      active={selected === item.id } 
+                      setSelected={setSelected}
+                      id={item.id}
+                    />
                ))}
             </ul>
             <div className="container">
