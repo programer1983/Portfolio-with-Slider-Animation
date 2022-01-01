@@ -52,10 +52,19 @@
                 border: none;
                 border-radius: 10px;
                 font-weight: 500;
+                margin-bottom: 30px;
                 cursor: pointer;
 
                 &:focus {
                     outline: none;
+                }
+            }
+
+            span {
+                color: green;
+
+                h3 {
+                    font-size: 25px;
                 }
             }
         }
