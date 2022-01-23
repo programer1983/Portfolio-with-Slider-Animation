@@ -6,7 +6,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
+    overflow-x: hidden;
+    scrollbar-width: none;
+    
     .arrow {
         height: 50px;
         position: absolute;
